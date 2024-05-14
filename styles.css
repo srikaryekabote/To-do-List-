@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital@0;1&display=swap');
+*{
+    margin:5px;
+    padding:2.5px;
+    font-family:'Ubuntu Sans', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(65deg,#4ec3d5c9,#3b6baae3);
+  }
+  
+  #todo-container {
+    width: 350px;
+    height: 250px;
+    margin: 20px auto;
+  }
+  .todo{
+    width:100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding:40px 30px 70px;
+    border-radius: 10px;
+}
+.todo h2{
+  color:rgb(34, 40, 40);
+  display: felx;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  position: relative;
+}
+  
+.row{
+  display:flex;
+  align-items: center;
+  margin-bottom: space-between;
+  background: #edeef0;
+  border-radius:30px;
+  padding-left:20px;
+  margin-bottom:25px;
+}
+input{
+  flex:1;
+  border:none;
+  outline:none;
+  padding:10px 25px;
+  color:#040404;
+  background: transparent;
+  font-size:14px;
+  border: #0b0b0b solid;
+  border-radius: 40px;
+  
+
+}
+button{
+  border:none;
+  outline:none;
+  padding:10px 25px;
+  background: #1c7ee8;
+  color:#fff;
+  font-size:16px;
+  cursor:pointer;
+  border-radius: 40px;
+}
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .todo-item {
+    color:#fff;
+    background-color: #202020;
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  
+  .todo-item:hover {
+    background-color: #313131;
+
+  }
+  
+  .todo-item .actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+  }
+  
+  .todo-item:hover .actions {
+    display: block;
+  }
+  
+  .actions button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  
+  .actions button:hover {
+    color: red;
+  }
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #aaa;
+  }
+  
+  .close:hover {
+    color: #f00;
+  }
+  /* Add this to your existing CSS */
+@keyframes slideOutLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+.todo-item.deleted {
+  animation: slideOutLeft 0.5s forwards;
+}
